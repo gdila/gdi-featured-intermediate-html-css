@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Lato|Bree+Serif);
 
-body {color: #333; 
+body {color: #333;
     font-family: 'Lato', sans-serif;
     padding-top: 66px;
 }
@@ -36,18 +36,23 @@ nav li a:hover {
     background: #e5e5e5;
 }
 #brand {
-	text-indent: -9000px;
-    background: url(../images/z.png) no-repeat top left;
-    background-size: 45px;
-    height: 45px;
-    width: 45px;
     float: left;
     margin: 10px;
-} 
+}
+#brand img {
+    height: auto;
+    width: 45px;
+}
 
 .container {
-    width: 100%; 
+    width: 100%;
     margin: 0 auto;
+}
+
+.container::after {
+    clear: both;
+    content: '';
+    display: table;
 }
 
 #hero {
@@ -60,7 +65,7 @@ nav li a:hover {
 }
 
 #hero img {
-	width: 150px; 
+	width: 150px;
 	border-radius: 50%;
     xmargin-top: 30px;
 }
@@ -160,7 +165,7 @@ footer
     }
     #main-content h3{
         font-size: 150%;
-    }   
+    }
 }
 
 @media only screen and (max-width: 640px)
@@ -170,5 +175,5 @@ footer
         width: 100%;
         padding: 0px;
         margin: 0 0 40px 0;
-    } 
+    }
 }

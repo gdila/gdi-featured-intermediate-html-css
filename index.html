@@ -62,11 +62,7 @@
             </section>
             <section>
                 <h2>Thanks to our host:</h2>
-            </section>
-            <section>
-                <h3>Class notes</h3>
-                <p>All slides are available at:<br />
-                <a href="http://girldevelopit.github.io/gdi-featured-intermediate-html-css/">http://girldevelopit.github.io/gdi-featured-intermediate-html-css/</a></p>
+                <p><img src="images/indiedesk.jpg" alt="IndieDesk"></p>
             </section>
             <!-- Welcome-->
             <section class="hide-pdf">
@@ -96,6 +92,13 @@
                     <li>Unlimited amount of money - where would you travel to?</li>
             </section>
             <section>
+                <h3>Class notes</h3>
+                <p>Class slides are available at:<br />
+                <a href="http://gdila.org/html201">http://gdila.org/html201</a></p>
+                <p>Download the files for class today:<br />
+                <a href="workshop-files.zip">Class files</a></p>
+            </section>
+            <section>
                 <h2>What we'll be covering in this class</h2>
                 <p>We'll be jumping into HTML/CSS right where the beginner class left off.</p>
                 <p>We will not be going over the previous class, we just don't have the time!</p>
@@ -106,6 +109,7 @@
             </section>
             <section data-background="#f05b62">
                 <h1 style="color: #fafafa;">Workshop files</h1>
+                <p><a href="workshop-files.zip" style="color: #fafafa;">Download them now</a></p>
             </section>
             <section>
                 <h3>Workshop files</h3>
@@ -296,26 +300,25 @@
                 <p>Percentage of HTML5 Elements supported:</p>
                 <ul>
                     <li class="chrome">
-                        <strong>Chrome 43:</strong>
-                        <span class="green">95% supported</span>
+                        <strong>Chrome 52:</strong>
+                        <span class="green">89% supported</span>
                     </li>
                     <li class="opera">
-                        <strong>Opera 29:</strong>
-                        <span class="blue">94% supported</span>
+                        <strong>Opera 37:</strong>
+                        <span class="blue">88% supported</span>
                     </li>
                     <li class="firefox">
-                        <strong>Firefox 38:</strong>
-                        <span class="blue">84% supported</span>
+                        <strong>Firefox 48:</strong>
+                        <span class="blue">83% supported</span>
                     </li>
                     <li class="webkit">
-                        <strong>Safari 8:</strong>
-                        <span class="blue">71% supported</span>
+                        <strong>Safari 9.1:</strong>
+                        <span class="blue">67% supported</span>
                     </li>
                     <li class="ie">
-                        <strong>Internet Explorer 11:</strong>
-                        <span class="blue">60% supported</span>
+                        <strong>Edge 14:</strong>
+                        <span class="blue">83% supported</span>
                     </li>
-
                 </ul>
             </section>
             <section>
@@ -510,11 +513,11 @@ nav li a {
             <section>
                 <h3>Fixed Nav: Adding a brand</h3>
                 <p>We can use an
-                    <code>H1</code> with text replacement to include a brand, or logo, in the corner that will still work if images are turned off, making it accesible to screen readers.</p>
+                    <code>H1</code> with an image that has an alt attribute include a brand, or logo, in the corner that will still work if images are turned off, making it accesible to screen readers.</p>
                 <pre><code class="xml">
 <header>
     <nav>
-    <h1 id="brand">IMA Zebra</h1>
+    <h1 id="brand"><img src="images/z.png" alt="IMA Zebra"></h1>
         <ul>
             <li><a href="#home">My Home</a></li>
             <li><a href="#diet">My Diet</a></li>
@@ -527,25 +530,17 @@ nav li a {
             <section>
                 <h3>Fixed Nav: Text replacement &amp; H1s</h3>
                 <pre><code class="css">#brand {
-    color: transparent;
-    background: url(../images/z.png) no-repeat top left;
-    height: 60px;
-    width: 60px;
     float: left;
-    margin: 5px;
+    margin: 10px;
+}
+#brand img {
+    height: auto;
+    width: 45px;
 }
 nav ul {
     float: right;
     width: auto;
 }   </code></pre>
-            </section>
-            <section>
-                <h3>Why Text Replacement?</h3>
-                <ul>
-                    <li>If we turn the CSS off for this page - the title will still be visible to the browser.</li>
-                    <li>If a user is coming to our site with a screen reader - the title of the site will be readable to them</li>
-                    <li>Search engines &hearts; it!</li>
-                </ul>
             </section>
             <section>
                 <h3>Fixed Nav: Container</h3>
@@ -554,7 +549,7 @@ nav ul {
 <header>
     <nav>
         <div class="container">
-            <h1 id="brand">IMA Zebra</h1>
+            <h1 id="brand"><img src="images/z.png" alt="IMA Zebra"></h1>
                 <ul>
                     <li><a href="#home">My Home</a></li>
                     <li><a href="#diet">My Diet</a></li>
